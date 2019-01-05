@@ -1,5 +1,6 @@
 <?php 
 class User_model extends CI_Model{
+    
     public function showAll(){
        $query = $this->db->get('users');
         if($query->num_rows() > 0){

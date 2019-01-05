@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+
 class User extends CI_Controller{
     
     function __construct(){
@@ -15,7 +16,7 @@ class User extends CI_Controller{
     }
     
     public function showAll(){
-       $query=  $this->user->showAll();
+       $query =  $this->user->showAll();
              if($query){
                    $result['users']  = $this->user->showAll();
              }
