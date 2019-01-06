@@ -23,10 +23,12 @@ Vue.component('modal',{ //modal
 </transition>
     `
 })
+
+var base_url = '<?php echo base_url(); ?>';
 var v = new Vue({
    el:'#app',
     data:{
-        url:'http://localhost/ci_vuejs/',
+        url: base_url,
         addModal: false,
         editModal:false,
         deleteModal:false,
@@ -47,7 +49,7 @@ var v = new Vue({
         
         //pagination
         currentPage: 0,
-        rowCountPage:5,
+        rowCountPage:3,
         totalUsers:0,
         pageRange:2
     },

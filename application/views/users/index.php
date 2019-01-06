@@ -12,9 +12,9 @@
                      <div class="notification is-success text-center px-5 top-middle" v-if="successMSG" @click="successMSG = false">{{successMSG}}</div>
             </transition>
         <div class="col-md-12">
-           <table class="table bg-dark my-3">
+           <table class="table bg-dark my-2">
                <tr>
-                   <td> <button class="btn btn-default btn-block" @click="addModal= true">Add</button></td>
+                   <td> <button class="btn btn-default btn-block" @click="addModal=true">Add</button></td>
                    <td><input placeholder="Search"type="search" class="form-control" v-model="search.text" @keyup="searchUser" name="search"></td>
                </tr>
            </table>
@@ -39,10 +39,10 @@
                         <td>{{user.contact}}</td>
                         <td>{{user.address}}</td>
                         <td>
-                        <img :src="imgGender(user.gender)"  width='50' height="50">
+                        <img :src="imgGender(user.gender)"  width='25' height="25">
                         </td>
-                        <td><button class="btn btn-info fa fa-edit" @click="editModal = true; selectUser(user)"></button></td>
-                        <td><button class="btn btn-danger fa fa-trash" @click="deleteModal = true; selectUser(user)"></button></td>
+                        <td><button class="btn btn-info btn-sm fa fa-edit" @click="editModal = true; selectUser(user)"></button></td>
+                        <td><button class="btn btn-danger btn-sm fa fa-trash" @click="deleteModal = true; selectUser(user)"></button></td>
                     </tr>
                     <tr v-if="emptyResult">
                       <td colspan="9" rowspan="4" class="text-center h1">No Record Found</td>
